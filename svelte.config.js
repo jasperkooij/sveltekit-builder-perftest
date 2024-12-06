@@ -14,7 +14,12 @@ const config = {
 		adapter: adapter({
 			// Specify runtime for both Vercel and Netlify
 			runtime: 'nodejs20.x'
-		})
+		}),
+		// Add explicit Node.js version support
+		env: {
+			dir: '.',
+			publicPrefix: 'PUBLIC_'
+		}
 	}
 };
 
