@@ -10,8 +10,8 @@ export async function load(event) {
 		apiKey: apiKey,
 		options: getBuilderSearchParams(event.url.searchParams),
 		userAttributes: {
-		urlPath: event.url.pathname || '/',
-	},
-});
+			urlPath: event.url.pathname || '/'
+		}
+	});
 	return { content };
 }

@@ -1,7 +1,7 @@
 <!-- src/routes/[...catchall]/+page.svelte -->
 
 <script>
-	import { isPreviewing, Content } from "@builder.io/sdk-svelte";
+	import { isPreviewing, Content } from '@builder.io/sdk-svelte';
 
 	const apiKey = import.meta.env.VITE_PUBLIC_BUILDER_API_KEY;
 	const model = 'page';
@@ -16,14 +16,9 @@
 <main>
 	<!-- TO DO: Add your Public API Key in <Content/>-->
 	{#if canShowContent}
-		<div>page Title: {data.content?.data?.title || "Unpublished"}</div>
-		<Content
-			model={model}
-			content={data.content}
-			apiKey={apiKey}
-		/>
+		<div>page Title: {data.content?.data?.title || 'Unpublished'}</div>
+		<Content {model} content={data.content} {apiKey} />
 	{:else}
 		Content Not Found
 	{/if}
 </main>
-
